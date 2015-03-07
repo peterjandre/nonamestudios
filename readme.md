@@ -1,0 +1,1 @@
+This is my final project for NYCDA Web Dev 100. I have utilized parallax scrolling with Skrollr.
