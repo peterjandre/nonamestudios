@@ -109,31 +109,64 @@
 	<div class="gap"></div>
 	<div id="gearlist">
 		<h3>Gear List</h3>
-			<p>Pro Tools 11</p>
-			<p>Avid Eleven Rack</p>
-			<p>Gibson SG</p>
-			<p>Larrivee OM-03 Acoustic Guitar</p>
-			<p>Shure SM81, SM57</p>
-			<p>Studio Projects C1</p>
+		<h4>(click image to show/hide description)</h4>
+		<div class="gear">
+			<img src="images/protools.png">
+			<p>Pro Tools 11 is a digital audio workstation for Microsoft Windows and OS X developed and manufactured by Avid Technology. Pro Tools can run as standalone software, or operate using a range of external A/D converters and internal PCI or PCIe audio cards with onboard DSP.</p>
+		</div>
+		<div class="clear"></div>
+		<div class="gear">
+			<img src="images/protools.png">
+			<p>Avid Eleven Rack is a digital audio workstation for Microsoft Windows and OS X developed and manufactured by Avid Technology. Pro Tools can run as standalone software, or operate using a range of external A/D converters and internal PCI or PCIe audio cards with onboard DSP.</p>
+		</div>
+		<div class="clear"></div>
+		<div class="gear">
+			<img src="images/protools.png">
+			<p>Gibson SG is a digital audio workstation for Microsoft Windows and OS X developed and manufactured by Avid Technology. Pro Tools can run as standalone software, or operate using a range of external A/D converters and internal PCI or PCIe audio cards with onboard DSP.</p>
+		</div>
+		<div class="clear"></div>
+		<div class="gear">
+			<img src="images/protools.png">
+			<p>Larrivee OM-03 Acoustic Guitar is a digital audio workstation for Microsoft Windows and OS X developed and manufactured by Avid Technology. Pro Tools can run as standalone software, or operate using a range of external A/D converters and internal PCI or PCIe audio cards with onboard DSP.</p>
+		</div>
+		<div class="clear"></div>
+		<div class="gear">
+			<img src="images/protools.png">
+			<p>Shure SM81, SM57 is a digital audio workstation for Microsoft Windows and OS X developed and manufactured by Avid Technology. Pro Tools can run as standalone software, or operate using a range of external A/D converters and internal PCI or PCIe audio cards with onboard DSP.</p>
+		</div>
+		<div class="clear"></div>
+		<div class="gear">
+			<img src="images/protools.png">
+			<p>Studio Projects C1 is a digital audio workstation for Microsoft Windows and OS X developed and manufactured by Avid Technology. Pro Tools can run as standalone software, or operate using a range of external A/D converters and internal PCI or PCIe audio cards with onboard DSP.</p>
+		</div>
+		<div class="clear"></div>					
 	</div>
 	<div id="faqs">
 		<h3>FAQs</h3>
-		<p>
+		<p class="question">
 			Are you located in a bedroom?
 		</p>
-		<p>
+		<p class="answer"				
+			data--100-bottom="color:rgba(0,0,0,1)"
+			data-bottom="color:rgba(0,0,0,0)">
 			...Yes. But it's a very spacious bedroom.
 		</p>
-		<p>
+		<p class="question">
 			So none of these pictures are of your studio?
 		</p>
-		<p>			
+		<p class="answer"
+			data--100-bottom="color:rgba(0,0,0,1)"
+			data-bottom="color:rgba(0,0,0,0)">			
 			...No. But I'm free as opposed to these $200/hr studios, so let's not complain too much. 
 		</p>
-		<p>
+		<p class="question"
+			data--100-bottom="color:rgba(0,0,0,1)"
+			data-bottom="color:rgba(0,0,0,0)">
 			Ok. Sorry.
 		</p>
-		<p> 
+		<p class="answer"
+			data--100-bottom="color:rgba(0,0,0,1)"
+			data-bottom="color:rgba(0,0,0,0)"> 
 			That's all right. I forgive you. 
 		</p>
 	</div>
@@ -175,7 +208,7 @@
 			data-bottom-top="background-color:rgba(6,20,57,0);transform:scale(0) rotate(0deg)"
 			data-center="background-color:rgba(6,20,57,1);transform:scale(1) rotate(1080deg)">
 				For booking and queries:
-				<button><a href="mailto:info@nycda.com">MAIL OWNER</a></button>
+				<button><a href="mailto:info@nycda.com">EMAIL OWNER</a></button>
 		</div>
 	</div>	
 </div>
@@ -191,6 +224,15 @@
 			$("h1").hide();
 
 			$("h1").fadeIn(4000);
+
+			$(".gear p").hide();
+
+			$(".gear img").click(function() {
+				var pick = $(this).next();
+				$(pick).toggle();
+			});
+
+
 		});
 </script>
 </body>
