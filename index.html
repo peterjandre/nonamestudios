@@ -114,37 +114,37 @@
 		<h4>(click image to show/hide description)</h4>
 		<button>SHOW/HIDE ALL</button>
 		<div class="gear">
-			<img src="images/protools.png">
+			<div class="gearpic" style=background-image:url(images/protools.png)></div>
 			<p>Pro Tools 11 is a digital audio workstation for Microsoft Windows and OS X developed and manufactured by Avid Technology. Pro Tools can run as standalone software, or operate using a range of external A/D converters and internal PCI or PCIe audio cards with onboard DSP.</p>
 		</div>
 		<div class="clear">
 		</div>
 		<div class="gear">
-			<img src="images/elevenrack.jpg">
+			<div class="gearpic" style=background-image:url(images/elevenrack.jpg)></div>
 			<p>Avid's Eleven Rack is a revolutionary guitar recording and signal-processing system that solves many of the challenges guitarists face in the studio and onstage. Use it to record with the included Pro Tools | Software. Then, take it onstage to perfectly reproduce your custom-created guitar tones and effects!</p>
 		</div>
 		<div class="clear">
 		</div>
 		<div class="gear">
-			<img src="images/sg.jpg">
+			<div class="gearpic" style=background-image:url(images/sg.jpg)></div>
 			<p>The Gibson SG is a solid-body electric guitar model that was introduced in 1961 (as the Gibson Les Paul) by Gibson, and remains in production today with many variations on the initial design available. The SG Standard is Gibson's best selling model of all time.</p>
 		</div>
 		<div class="clear">
 		</div>
 		<div class="gear">
-			<img src="images/larrivee.png">
+			<div class="gearpic" style=background-image:url(images/larrivee.png)></div>
 			<p>Larrivee OM-03 Acoustic Guitar comes with all solid wood construction, a single piece mahogany neck, Canadian Sitka Spruce sound board &amp; bracing, an African ebony fretboard &amp; bridge, Canadian maple body binding, and a mahogany back &amp; sides.</p>
 		</div>
 		<div class="clear">
 		</div>
 		<div class="gear">
-			<img src="images/sm81.jpg">
+			<div class="gearpic" style=background-image:url(images/sm81.jpg)></div>
 			<p>The Shure SM81 is a high-quality, unidirectional condenser microphone designed for studio recording, broadcasting, and sound reinforcement. Its wide frequency response, low noise characteristics, and low RF susceptibility have made it a standard for applications involving acoustic instruments, especially guitar, piano, and cymbals.</p>
 		</div>
 		<div class="clear">
 		</div>
 		<div class="gear">
-			<img src="images/c1.jpg">
+			<div class="gearpic" style=background-image:url(images/c1.jpg)></div>
 			<p>The Studio Projects C1 is a large diaphragm, fixed-cardioid condenser microphone employing a 1.06" (27mm) capsule, high quality, low noise amplifier and balanced, transformerless output circuitry. It features switchable -10dB or -20dB pad and 6dB@75Hz or 150Hz high pass filter for for added control in various recording applications.</p>
 		</div>
 		<div class="clear">
@@ -242,13 +242,17 @@
 
 			$(".gear p").hide();
 
-			$(".gear img").click(function() {
+			$(".gearpic").click(function() {
 				var pick = $(this).next();
 				$(pick).toggle();
 			});
 
 			$("#gearlist button").click(function(){
-				$(".gear p").toggle();
+				if ($(".gear p:visible").length) {
+					$(".gear p:visible").hide();
+				} else {
+					$(".gear p").show();
+				}
 			});
 
 		});
